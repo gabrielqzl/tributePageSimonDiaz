@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --primary: #66362d;
+    --secondary: #ffffcc;
+    --secondaryMd: #CCB58B;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1000px;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+#title {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    margin: .5em 0em;
+
+}
+
+#title h1 {
+    width: 100%;
+    padding: .5em;
+    font-size: 2em;
+}
+
+#title p {
+    padding-bottom: .5em;
+    font-size: 1em;
+}
+
+#image {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+}
+
+#img-div {
+    width: 100%;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#img-caption {
+    width: 100%;
+    padding: .5em;
+    background: var(--primary);
+}
+
+#tribute-info {
+    display: flex;
+    width: 100%;
+    padding: 1em 2.5em;
+    background: var(--secondaryMd);
+    margin-bottom: 1em;
+}
+
+#tribute-info h3 {
+    margin-bottom: 1em;
+}
+
+.lyric {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--primary);
+    box-shadow: var(--primary) 6px 6px;
+    background: var(--secondary);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 3em;
+    margin: .5em 0em;
+}
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 2em;
+}
+
+@media (max-width: 900px) {
+
+    #main {
+        width: 100%;
+    }
+
+    #title {
+        order: 1;
+    }
+
+    .lyric {
+        font-size: 2em;
+        width: 100%;
+        margin: 0 0 .5em 0;
+        order: 2;
+    }
+
+    #tribute-info {
+        width: 100%;
+        order: 4;
+    }
+
+    #img-div {
+        width: 100%;
+        order: 3;
+    }
+
+    #img-caption {
+        width: 100%;
+    }
+
+    #tribute-link1 {
+        order: 5;
+    }
+    footer {
+        order: 6;
+    }
+
+}
+
+@media (max-width: 415px) {
+    .lyric {
+        font-size: 1.5em;
+    }
+
+    #image {
+        max-width: 100%;
+        max-height: 300px;
+        height: auto;
+    }
+
+    #img-div {
+        margin-bottom: 3em;
+    }
+}
